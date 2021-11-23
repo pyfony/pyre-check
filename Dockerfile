@@ -23,6 +23,8 @@ RUN ~/miniconda/bin/conda config --remove channels defaults && \
 
 COPY ./pyre_check.sh /root/pyre_check.sh
 
+RUN chmod +x /root/pyre_check.sh
+
 RUN mkdir /app
 
 VOLUME /app/.venv
